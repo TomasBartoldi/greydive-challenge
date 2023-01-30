@@ -100,7 +100,14 @@ const FormData = () => {
   const renderError = (message) => <p className="help is-danger">{message}</p>;
   
   return (
+    <div className='form'>
+      <div className='form-title'>
+        <h2>Grey Dive Challenge</h2>
+        <hr /> 
+        <p>Tomás Bartoldi</p>
+      </div>
     <Formik
+      
       initialValues={{ name: '', selectOption: '', date: '', checkbox: false }}
       validationSchema={FormSchema}
       onSubmit={async (values, { resetForm }) => {
@@ -109,31 +116,49 @@ const FormData = () => {
       }}
     >
       {({ isSubmitting }) => (
-        <Form>
+        <Form
+        className='form-container'
+        >
+          <div className='form-inputs-container'>
+
+          <div className='form-group'>
           <Input
+          id='name'
           type='text'
           name='name'
-          placeholder='Nombre completo'
-          className='name'
+          placeholder=' '
+          className='form-input'
           render={renderError}
           />
+          <label for='name' className='form-label'>{dataProperties.pregunta1.label}:</label>
+          <span className='form-line'></span>
+          </div>
 
+          <div className='form-group'>
           <Input
+          id='email'
           type='email'
           name='email'
-          placeholder='Email'
-          className='email'
+          placeholder=' '
+          className='form-input'
           render={renderError}
           /> 
+          <label for='email' className='form-label'>{dataProperties.pregunta2.label}:</label>
+          <span className='form-line'></span>
+          </div>
+          
 
+
+          <div>
           <Input
           type='date'
           name='date'
           className='date'
           render={renderError}
-          placeholder=''
+          placeholder=' '
           />
-
+          <label>{dataProperties.pregunta3.label}:</label>
+          </div>
 
         <div>
           <Field as="select" name="selectOption">
@@ -153,16 +178,20 @@ const FormData = () => {
           {
             click &&
           <button 
+          className='form-submit'
           type="submit" 
           disabled={isSubmitting}
           onClick={handleRedirect}
           >
             Submit
-          </button> 
+          </button>
+           
           }
+          </div>
         </Form>
       )}
     </Formik>
+    </div>
   )
 }
 
