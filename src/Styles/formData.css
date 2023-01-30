@@ -1,8 +1,7 @@
 .form{
     width: 100%;
     height: 100vh;
-    padding-top: 1em;
-    padding-bottom: 5em;
+    padding: .1em 0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -10,7 +9,7 @@
 }
 
 .form-title{
-    margin-top: 3em;
+    
     background-color: #fff;
     border-radius: 5px;
     padding: 3.7em;
@@ -19,12 +18,14 @@
     justify-content: center;
     flex-direction: column;
     margin-bottom: 15px;
+    gap: 15px;
     box-shadow: 6px 6px 5px 0px rgba(179,179,179,0.75);
     -webkit-box-shadow: 6px 6px 5px 0px rgba(179,179,179,0.75);
     -moz-box-shadow: 6px 6px 5px 0px rgba(179,179,179,0.75);
 }
 
 .form-container{ 
+    width: 17.5em;
     border-radius: 5px;
     background-color: #fff;
     padding: 4.5em 3em;
@@ -80,4 +81,30 @@
 
 .date-select-color{
     color: #5757577e;
+}
+
+.terms-conditions{
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox{
+    margin-left: 4px;
+}
+
+.tomasbartoldi{
+    color: #5757577e;
+}
+
+.form-submit{
+    background: #3866f2;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .3em;
 }

@@ -1,26 +1,24 @@
 
 .responses-container{
-    
+    padding: 2em 0;
     margin: 0;
     width: 100%;
     height: 100%;
     display: grid;
     grid-gap: 40px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-items: center;
 }
 
 .responses-cards{
-    margin-top: 100px;
-    padding: 30px;
+    padding: 3.5em 3.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgb(152, 152, 152);
-    width: 250px;
-    height: 300px;
+    border: none;
+    
     background-color: #FFF8F6;
     border-radius: 5px;
     box-shadow: 6px 6px 5px 0px rgba(179,179,179,0.75);

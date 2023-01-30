@@ -18,14 +18,14 @@ const FormSchema = Yup.object().shape({
   name: Yup.string()
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
-    .required('Required'),
+    .required('*required'),
   selectOption: Yup.string()
-    .required('Select an option'),
+    .required('*required'),
   date: Yup.string()
-    .required('Required'),
+    .required('*required'),
   email: Yup.string()
-    .required('Required'),
-  checkbox: Yup.boolean().default(false).required('Required')
+    .required('*required'),
+  checkbox: Yup.boolean().default(false).required('*required')
 })
 
 const itemsMap = items[3].options.map((e, ind) =>(
@@ -87,7 +87,7 @@ const FormData = () => {
 
   const handleRedirect = () => {
     setTimeout(() => {      
-      window.confirm('nav to responses') && navigate('/responsesid')
+      window.confirm('nav to responses') && navigate('/responses')
     }, 500);
   }
 
@@ -102,9 +102,8 @@ const FormData = () => {
   return (
     <div className='form'>
       <div className='form-title'>
-        <h2>Grey Dive Challenge</h2>
-        <hr /> 
-        <p>Tomás Bartoldi</p>
+        <h2>GREY DIVE CHALLENGE</h2>
+        <p className='tomasbartoldi'>TOMÁS BARTOLDI</p>        
       </div>
     <Formik
       
@@ -174,11 +173,17 @@ const FormData = () => {
           render={renderError}
           />
         </div>
-
-          <input type="checkbox" value={click} onChange={handleCheckbox} />
+          <div className='terms-conditions'>
           <label htmlFor="checkbox" className='date-select-color'>
-            I accept the terms and conditions 
+          Términos y condiciones 
           </label>
+          <input
+          className='checkbox'
+          type="checkbox" 
+          value={click} 
+          onChange={handleCheckbox} />
+          </div>
+
           {
             click &&
           <button 
@@ -187,7 +192,7 @@ const FormData = () => {
           disabled={isSubmitting}
           onClick={handleRedirect}
           >
-            Submit
+            Enviar
           </button>
            
           }

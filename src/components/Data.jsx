@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import jsonData from '../data/jsonData'
 import FormData from './FormData'
 
@@ -36,4 +36,4 @@ const Data = () => {
   )
 }
 
-export default Data
+export default Data */
