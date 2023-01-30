@@ -87,7 +87,7 @@ const FormData = () => {
 
   const handleRedirect = () => {
     setTimeout(() => {      
-      window.confirm('nav to responses') && navigate('/responses')
+      window.confirm('Presiona aceptar para ver los formularios cargados') && navigate('/responses')
     }, 500);
   }
 
