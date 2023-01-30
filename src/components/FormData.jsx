@@ -149,20 +149,24 @@ const FormData = () => {
           
 
 
-          <div>
+          <div className='form-group'>
           <Input
           type='date'
           name='date'
-          className='date'
+          className='form-input'
           render={renderError}
           placeholder=' '
           />
-          <label>{dataProperties.pregunta3.label}:</label>
+          <label className='form-label'>{dataProperties.pregunta3.label}:</label>
           </div>
 
-        <div>
-          <Field as="select" name="selectOption">
-          <option value={'default'}>Selecciona tu país</option>
+        <div className='form-group'>
+          <Field
+          as="select" 
+          name="selectOption"
+          className='form-input'
+          >
+          <option value={'default'} className='date-select-color'>Selecciona tu país</option>
             {itemsMap}            
           </Field>
           <ErrorMessage
@@ -172,7 +176,7 @@ const FormData = () => {
         </div>
 
           <input type="checkbox" value={click} onChange={handleCheckbox} />
-          <label htmlFor="checkbox">
+          <label htmlFor="checkbox" className='date-select-color'>
             I accept the terms and conditions 
           </label>
           {

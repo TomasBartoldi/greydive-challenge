@@ -64,19 +64,20 @@
     font-family: 'Roboto', sans-serif; 
 }
 
-.form-input:focus + .form-label{
-    transform: translateY(-12px);
-}
+/* .form-input:focus + .form-label{
+    transform: translateY(-12px) scale(.7);
+} */
 
 .form-label{
    color: var(--color);
    position: absolute;
-   top: 0;
-   left: 5.5px;
+   top: -30px;
+   left: .5px;
    transform: translateY(10px);
    transition: transform .5s, color .3s;
 }
 
-.form-input{
-    
+
+.date-select-color{
+    color: #5757577e;
 }
