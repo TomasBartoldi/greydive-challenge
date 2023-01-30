@@ -36,18 +36,24 @@ const Reponses = () => {
                 <div 
                 className='responses-cards'
                 key={lista.id}
-                >            
+                >    
+                <div className='name__container'>
                     <label className='label'>Nombre completo:</label>
                     <p className='p'> {lista.pregunta1.name} </p>
-                                
+                </div>        
+                <div>
                     <label className='label'>Correo electrónico:</label>
                     <p className='p'>{lista.pregunta2.name}</p>
-                    
+                </div>                
+                <div>
                     <label className='label'>Fecha de Nacimiento:</label>
                     <p className='p'>{lista.pregunta3.name}</p>
-                
+                </div>    
+                <div>
                     <label className='label'>Pais de orígen</label>
                     <p className='p'>{lista.pregunta4.name}</p>
+                </div>
+                    
                                  
                 </div>
             )})

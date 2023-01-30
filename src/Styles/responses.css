@@ -2,8 +2,6 @@
 .responses-container{
     padding: 2em 0;
     margin: 0;
-    width: 100%;
-    height: 100%;
     display: grid;
     grid-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
@@ -15,10 +13,10 @@
     padding: 3.5em 3.5em;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     border: none;
-    
+    gap: .8em;
     background-color: #FFF8F6;
     border-radius: 5px;
     box-shadow: 6px 6px 5px 0px rgba(179,179,179,0.75);
@@ -29,8 +27,13 @@
 .label{
     font-weight: bold;
     font-family: 'Outfit', sans-serif;
+    
 }
 
 .p{
     font-family: 'Outfit', sans-serif;
+}
+
+.name__container{
+    
 }
